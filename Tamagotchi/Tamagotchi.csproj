@@ -1,0 +1,193 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="emotionsIcon.png" />
+    <None Remove="energyIcon.png" />
+    <None Remove="hungerIcon.png" />
+    <None Remove="Images\Backgrounds\nightSky.png" />
+    <None Remove="Images\Food\bread.png" />
+    <None Remove="Images\Food\chocolate.png" />
+    <None Remove="Images\Food\coffee.png" />
+    <None Remove="Images\Food\juice.png" />
+    <None Remove="Images\Food\onigiri.png" />
+    <None Remove="Images\Food\pizza.png" />
+    <None Remove="Images\Medicines\healthPotion.png" />
+    <None Remove="Images\Menu\coinIcon.png" />
+    <None Remove="Images\Menu\Day\emotionsIconDay.png" />
+    <None Remove="Images\Menu\Day\energyIconDay.png" />
+    <None Remove="Images\Menu\Day\healthIconDay.png" />
+    <None Remove="Images\Menu\Day\menuIconDay.png" />
+    <None Remove="Images\Menu\loadingDoggo.gif" />
+    <None Remove="Images\Menu\Night\emotionsIconNight.png" />
+    <None Remove="Images\Menu\Night\energyIconNight.png" />
+    <None Remove="Images\Menu\Night\healthIconNight.png" />
+    <None Remove="Images\Menu\Night\menuIconNight.png" />
+    <None Remove="Images\Menu\Night\satietyIconNight.png" />
+    <None Remove="Images\Menu\satietyIcon.png" />
+    <None Remove="Images\Sprites\Grave\grave.png" />
+    <None Remove="Images\Sprites\PlayingTube\tubeSheep1.png" />
+    <None Remove="Images\Sprites\PlayingTube\tubeSheep2.png" />
+    <None Remove="Images\Sprites\Sleeping\sleepSheep1.png" />
+    <None Remove="Images\Sprites\Sleeping\sleepSheep2.png" />
+    <None Remove="Images\Sprites\Sleeping\sleepSheep3.png" />
+    <None Remove="Images\Sprites\Working\workingSheep.png" />
+    <None Remove="Images\Title\title.png" />
+    <None Remove="menu.png" />
+    <None Remove="&#xD;&#xA;		  &#xD;&#xA;&#xD;&#xA;&#xD;&#xA;\FallenDown.mp3" />
+    <None Remove="Music\GameOfThrones.mp3" />
+    <None Remove="Music\Home.mp3" />
+    <None Remove="Music\Ruins.mp3" />
+    <None Remove="Music\TakeMeToChurch.mp3" />
+    <None Remove="pixil-frame-0 %284%29.png" />
+    <None Remove="pixil-frame-0 %286%29.png" />
+    <None Remove="pixil-frame-0 %287%29 %281%29.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <COMReference Include="WMPLib">
+      <WrapperTool>tlbimp</WrapperTool>
+      <VersionMinor>0</VersionMinor>
+      <VersionMajor>1</VersionMajor>
+      <Guid>6bf52a50-394a-11d3-b153-00c04f79faa6</Guid>
+      <Lcid>0</Lcid>
+      <Isolated>false</Isolated>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="MediaPlayer">
+      <WrapperTool>tlbimp</WrapperTool>
+      <VersionMinor>0</VersionMinor>
+      <VersionMajor>1</VersionMajor>
+      <Guid>22d6f304-b0f6-11d0-94ab-0080c74c7e95</Guid>
+      <Lcid>0</Lcid>
+      <Isolated>false</Isolated>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+	
+	<ItemGroup>
+    <EmbeddedResource Remove="**/*.xaml" />
+</ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="WpfAnimatedGif" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PetLibrary\PetLibrary.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Images\Backgrounds\nightSky.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Medicines\healthPotion.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Food\bread.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Food\chocolate.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Food\coffee.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Food\juice.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Food\onigiri.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Food\pizza.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Menu\Day\emotionsIconDay.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Menu\Day\energyIconDay.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Menu\Day\healthIconDay.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Menu\Day\menuIconDay.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Menu\loadingDoggo.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Menu\Day\menuIcon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Menu\coinIcon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Menu\Day\satietyIconDay.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Menu\Night\emotionsIconNight.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Menu\Night\energyIconNight.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Menu\Night\healthIconNight.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Menu\Night\menuIconNight.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Menu\Night\satietyIconNight.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Sprites\Grave\grave.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Sprites\PlayingTube\tubeSheep1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Sprites\PlayingTube\tubeSheep2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Sprites\Regular\frontSheepRegular.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Sprites\Sleeping\sleepSheep1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Sprites\Sleeping\sleepSheep2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Sprites\Sleeping\sleepSheep3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Sprites\Working\workingSheep.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Title\title.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Music\FallenDown.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Music\GameOfThrones.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Music\Home.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Music\Ruins.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Music\TakeMeToChurch.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

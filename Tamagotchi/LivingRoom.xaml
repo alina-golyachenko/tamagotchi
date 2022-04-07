@@ -1,0 +1,63 @@
+﻿<Window x:Name="livingRoomWindow" x:Class="Tamagotchi.LivingRoom"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tamagotchi"
+        mc:Ignorable="d" Loaded="livingRoomWindow_Loaded" Closing="livingRoomWindow_Closing" MinWidth="650" MinHeight="600" MaxWidth="650" MaxHeight="600" FontFamily="Franklin Gothic Heavy" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Window.Style>
+        <Style/>
+    </Window.Style>
+    <Window.FocusVisualStyle>
+        <Style/>
+    </Window.FocusVisualStyle>
+    <Grid x:Name="livingRoomGrid" Margin="10,0,10,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="44*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Image x:Name="pictureBoxPet" HorizontalAlignment="Left" Height="100" VerticalAlignment="Center" Width="100" Source="/Images/Sprites/Regular/frontSheepRegular.png" Margin="265,0,0,0"/>
+        <ProgressBar x:Name="progressBarEmotions" HorizontalAlignment="Left" Height="40" Margin="183,20,0,0" VerticalAlignment="Top" Width="40" Foreground="#19000000" Value="100" Orientation="Vertical">
+            <ProgressBar.Background>
+                <ImageBrush ImageSource="/Images/Menu/Day/emotionsIconDay.png" Stretch="Uniform"/>
+            </ProgressBar.Background>
+        </ProgressBar>
+        <ProgressBar x:Name="progressBarHealth" HorizontalAlignment="Left" Height="40" Margin="227,20,0,0" VerticalAlignment="Top" Width="40" ValueChanged="progressBarHealth_ValueChanged" Foreground="#19000000" Value="100.1" Orientation="Vertical" RenderTransformOrigin="-1.297,0.597">
+            <ProgressBar.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.034"/>
+                    <TranslateTransform Y="0.013"/>
+                </TransformGroup>
+            </ProgressBar.RenderTransform>
+            <ProgressBar.Background>
+                <ImageBrush ImageSource="/Images/Menu/Day/healthIconDay.png" Stretch="Uniform"/>
+            </ProgressBar.Background>
+        </ProgressBar>
+        <ProgressBar x:Name="progressBarSatiety" HorizontalAlignment="Left" Height="40" Margin="93,20,0,0" VerticalAlignment="Top" Width="40" Value="100" Foreground="#19000000" Orientation="Vertical" ValueChanged="progressBarSatiety_ValueChanged">
+            <ProgressBar.Background>
+                <ImageBrush ImageSource="/Images/Menu/Day/satietyIconDay.png" Stretch="Uniform"/>
+            </ProgressBar.Background>
+        </ProgressBar>
+        <ProgressBar x:Name="progressBarEnergy" Height="40" Margin="138,20,0,0" VerticalAlignment="Top" Foreground="#19000000" Value="100" Orientation="Vertical" HorizontalAlignment="Left" Width="40" ValueChanged="progressBarEnergy_ValueChanged">
+            <ProgressBar.Background>
+                <ImageBrush ImageSource="/Images/Menu/Day/energyIconDay.png" Stretch="Uniform"/>
+            </ProgressBar.Background>
+        </ProgressBar>
+        <Button x:Name="buttonGiveName" Content="OK" HorizontalAlignment="Left" Margin="407,20,0,0" VerticalAlignment="Top" Click="buttonGiveName_Click" Height="40" Width="40" Background="#00DDDDDD" FontSize="16"/>
+        <TextBox x:Name="textBoxName" HorizontalAlignment="Left" Margin="274,20,0,0" Text="Введіть ім'я" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="40" VerticalContentAlignment="Center" FontSize="16"/>
+        <Button x:Name="buttonStore" Content="магазин" HorizontalAlignment="Left" Margin="475,488,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontWeight="Normal" Background="#00DDDDDD" BorderBrush="Black" Click="buttonStore_Click" Padding="10,10,10,10" Panel.ZIndex="10" BorderThickness="3,3,3,3" FontSize="16" FontFamily="Franklin Gothic Heavy" Width="141" Grid.ColumnSpan="2"/>
+        <Label x:Name="labelTotalMoney" Content="Label" HorizontalAlignment="Left" Margin="514,21,0,0" VerticalAlignment="Top" Height="40" VerticalContentAlignment="Center" Width="Auto" FontSize="16"/>
+        <Image HorizontalAlignment="Left" Height="40" Margin="467,21,0,0" VerticalAlignment="Top" Width="40" Source="/Images/Menu/coinIcon.png"/>
+        <Button x:Name="buttonPlay" Content="пограти" HorizontalAlignment="Left" Margin="10,488,0,0" VerticalAlignment="Top" BorderBrush="Black" Background="#00DDDDDD" Click="buttonPlay_Click" Padding="10,10,10,10" FontWeight="Normal" Panel.ZIndex="10" BorderThickness="3,3,3,3" FontSize="16" FontFamily="Franklin Gothic Heavy" Width="141"/>
+        <Button x:Name="buttonSleep" Content="спати" HorizontalAlignment="Left" Margin="165,488,0,0" VerticalAlignment="Top" BorderBrush="Black" Background="#00DDDDDD" Click="buttonSleep_Click" Padding="10,10,10,10" FontWeight="Normal" Panel.ZIndex="10" BorderThickness="3,3,3,3" FontSize="16" FontFamily="Franklin Gothic Heavy" Width="141"/>
+        <Button x:Name="buttonWork" Content="піти на роботу" HorizontalAlignment="Left" Margin="320,488,0,0" VerticalAlignment="Top" BorderBrush="Black" Background="#00DDDDDD" Padding="10,10,10,10" FontWeight="Normal" Click="buttonWork_Click" Panel.ZIndex="10" BorderThickness="3,3,3,3" FontSize="16" FontFamily="Franklin Gothic Heavy" Width="141"/>
+        <Button x:Name="buttonMenu" Content="" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top" Height="41" Width="45" Click="buttonMenu_Click" BorderBrush="#00707070">
+            <Button.Background>
+                <ImageBrush ImageSource="/Images/Menu/Day/menuIconDay.png"/>
+            </Button.Background>
+        </Button>
+
+    </Grid>
+</Window>
